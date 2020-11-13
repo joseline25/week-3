@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p><button onclick="myMove()">Click Me</button></p>
+    <div id="container">
+        <div id="animate" draggable=" true" ondragstart="drag(event);" ></div>
+    </div>
+
+    <script>
+
+        let box = document.getElementById('animate');
+            function drag(event) {
+                event.dataTransfer.setData('div', event.target.id);
+                console.log(event.target);
+            }
+
+            
+
+        function myMove(){
+            let abcisse = 20;
+            let timer = setInterval(function(){
+                box.style.left = abcisse + 'px';
+                abcisse += 10;
+                
+                if (abcisse >= 360) {
+                    clearInterval(timer);
+                    
+                }
+            }, 1000);
+            
+            
+        }
+
+      
+       
+        
+      
+    </script>
+</body>
+
+</html>

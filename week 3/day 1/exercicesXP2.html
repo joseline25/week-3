@@ -1,0 +1,58 @@
+<html>
+
+<body>
+    <div id="container">Users:</div>
+    <ul class="list">
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <ul class="list">
+        <li>David</li>
+        <li>Sarah</li>
+        <li>Dan</li>
+    </ul>
+
+    <script> 
+   // exercice 2
+   
+   // 1- Change the name “Pete” by “Richard”
+
+   let list1 = document.getElementsByClassName('list');
+   
+    let elt1 = list1[0].children[1];
+
+   elt1.innerText = 'Richard'; 
+
+   // 2- Change each first name of the <ul> by your name
+
+    list1[0].children[0].innerText = 'Joseline';
+    list1[1].children[0].innerText = 'Joseline';
+   
+    
+   // 3- Add at the end of each <ul>, a <li> that says “Hey students”
+
+    let li = document.createElement('li');
+    let p = document.createTextNode('Hey students');
+    let p1 = document.createTextNode('Hey students');
+
+    li.appendChild(p);
+    
+    list1[0].appendChild(li.appendChild(p1));
+    list1[1].appendChild(li);
+    console.log(list1[1]);
+
+    //4 - Delete the <li> Sarah
+
+    
+    list1[1].removeChild(list1[1].children[1]);
+
+    // 5- Bonus 
+    //  Add a class “student_list” to both of the <ul>
+        let second = list1[1];
+    console.log(list1[1]);
+    second.setAttribute('class', 'student_list');
+    console.log(list1[1]);
+    </script>
+</body>
+
+</html>

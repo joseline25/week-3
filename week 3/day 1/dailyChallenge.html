@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Challenge: Create a solar system</title>
+    <style>
+        body {
+            background-color: black;
+            padding: 10px;
+        }
+
+        .planet {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        .moon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgb(237, 237, 237);
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <script>
+        let solarSystem = {
+                mercure: { 'color': 'grey', 'moons': 0 },
+                venus: { 'color': 'yellow', 'moons': 0 },
+                terre: { 'color': 'blue', 'moons': 1 },
+                mars: { 'color': 'red', 'moons': 2 },
+                jupiter: { 'color': 'yellow', 'moons': 4 },
+                saturne: { 'color': 'lightyellow', 'moons': 8 },
+                uranus: { 'color': 'green', 'moons': 5 },
+                neptune: { 'color': 'darkblue', 'moons': 2 },
+            };
+
+
+            for (planete in solarSystem) {
+                let div1 = document.createElement('div');
+                div1.setAttribute('class', 'planet');
+                let couleur = solarSystem[planete].color;
+                div1.style.backgroundColor = couleur;
+                
+
+                for (let lune in solarSystem[planete].moons) {
+                    console.log(solarSystem[planete][lune]);
+                }
+                }
+
+                 
+            
+    </script>
+</body>
+
+</html>

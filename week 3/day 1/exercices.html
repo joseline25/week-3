@@ -1,0 +1,71 @@
+
+
+<html>
+
+<body>
+    <div>Users:</div>
+    <ul>
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+
+    <script type="text/javascript">
+    // Exercice 1 : For each of the questions, find 2 WAYS of accessing :
+
+    // 1 - The div DOM node? 
+   
+        let div = document.getElementsByTagName('div');
+
+        let div1 = document.querySelector('div');
+
+        let div2 = document.body.firstElementChild;
+
+        console.log(div);
+        console.log(div1);
+        console.log(div2);
+
+        // 2 - The ul DOM node?
+
+        let ul = document.getElementsByTagName('ul');
+
+        let ul1 = document.querySelector('ul');
+
+        let ul2 = document.body.firstElementChild;
+
+        let ul3 = document.body.lastElementChild;
+
+        let ul4 = div1.nextSibling;
+
+        console.log(ul);
+        console.log(ul1);
+        console.log(ul2);
+        console.log(ul3);
+        console.log(ul4);
+
+        //3- The second li (with Pete)?
+
+        let seconLi = ul1.children[1];
+
+        let secondLi1 = document.querySelector('ul:nth-child(1)');
+        
+        let secondLi2 = ul1.lastElementChild;
+
+        console.log(seconLi);
+
+        console.log(secondLi1);
+
+        console.log(secondLi2);
+
+        // juste le texte
+        
+        let Pete = seconLi.innerText;
+
+        let Pete1 = seconLi.textContent;
+
+        console.log(Pete);
+
+        console.log(Pete1);
+    </script>
+</body>
+
+</html>

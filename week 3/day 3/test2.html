@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test day 3</title>
+</head>
+
+<body>
+    <h1 style="display: none;"> The sales end in 10 secondes !</h1>
+
+
+    <script type="text/javascript">
+    let t = 10;
+    let timer2 = setInterval(display_h1,1000);
+
+        // permet l'affichage de h1 en modifiant la valeur du display
+        function display_h1() {
+            let h1 = document.querySelector('h1');
+            
+            h1.innerHTML=`The sales end in ${t} secondes`;
+
+            h1.style.display = 'block';
+            t--;
+
+            if(t<0){
+                clearInterval(timer2);
+                h1.innerHTML=`The sales are closed!!!`;
+            }
+        };
+        // permet l'affichage de h1 par la fonction display_h1 après 5 secondes
+        setTimeout(display_h1, 5000);
+
+    </script>
+</body>
+
+</html>

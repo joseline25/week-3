@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    <div id="container">Users:</div>
+    <ul class="list">
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <ul class="list">
+        <li>Sarah</li>
+        <li>Dan</li>
+    </ul>
+
+    <script type="text/javascript">   
+    
+    // exercice 2 
+
+    // For each of the questions, find 2 PROPERTIES to access :
+
+    // 1 - The div node
+
+    let div = document.getElementById('container');
+    let div1 = document.getElementsByTagName('div')[0];
+    let div2 = document.querySelector("div");
+    let div3 = document.children[0];
+    let div4 = document.querySelector('#container');
+
+    console.log(div);
+    console.log(div1);
+    console.log(div2);
+    console.log(div3);
+
+   // 2 -  The ul nodes, and render all of it's children one by one
+
+   let ul = document.querySelectorAll('ul');
+
+   console.log(ul);
+    
+    
+    
+    </script>
+</body>
+
+</html>
